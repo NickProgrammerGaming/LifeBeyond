@@ -127,4 +127,9 @@ public class PlayerMovement : MonoBehaviour
     {
         SceneManager.LoadScene(sceneNumber);
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRadius);
+    }
 }
