@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     public Animator animator;
     public float MovementSpeed;
     public float JumpForce;
@@ -31,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public Healthbar playerHealthbar;
     public GameObject gameOverScreen;
 
+    public ParticleSystem Dust;
+
 
 
     // Start is called before the first frame update
@@ -51,10 +54,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 chScale = transform.localScale;
         if (move < 0)
         {
+            
             chScale.x = -1;
         }
         if (move > 0)
         {
+            
             chScale.x = 1;
         }
 
@@ -64,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsGrounded", isGrounded);
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
+            CreateDust();
             rigbod.velocity = new Vector2(rigbod.velocity.x, JumpForce);
 
         }
@@ -131,5 +137,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(groundCheckPos.position, groundCheckRadius);
+    }
+
+    void CreateDust(){
+        Dust.Play();
     }
 }
