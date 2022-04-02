@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static bool canMove = true;
 
     public Animator animator;
     public float MovementSpeed;
@@ -49,8 +48,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canMove)
-        {
             move = Input.GetAxis("Horizontal");
             animator.SetFloat("Running", Mathf.Abs(move));
             Vector3 chScale = transform.localScale;
@@ -78,7 +75,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 rigbod.velocity = new Vector2(rigbod.velocity.x, rigbod.velocity.y * .5f);
             }
-        }
 
         if (rigbod.velocity.y < -0.01f)
         {

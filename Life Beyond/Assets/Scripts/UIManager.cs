@@ -11,22 +11,26 @@ public class UIManager : MonoBehaviour
     private PlayerShooting shooting;
     private PlayerMovement movement;
 
+    private void Start()
+    {
+        movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        shooting = GameObject.Find("Player").GetComponent<PlayerShooting>();
+    }
+
     public void CloseSatellite()
     {
         satelliteObject.SetActive(false);
-        PlayerMovement.canMove = true;
+        movement.enabled = true;
         PlayerShooting.canShoot = true;
     }
 
     public void DMGUp()
     {
-        shooting = GameObject.Find("Player").GetComponent<PlayerShooting>();
         shooting.damageModifiers.Value++;
     }
 
     public void HPUp()
     {
-        movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         movement.maxHealth.Value++;
         movement.currentHealth = movement.maxHealth.Value;
         movement.playerHealthbar.SetMaxHealth(movement.maxHealth.Value);
