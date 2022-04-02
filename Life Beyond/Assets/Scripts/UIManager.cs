@@ -21,15 +21,15 @@ public class UIManager : MonoBehaviour
     public void DMGUp()
     {
         shooting = GameObject.Find("Player").GetComponent<PlayerShooting>();
-        shooting.damageModifiers++;
+        shooting.damageModifiers.Value++;
     }
 
     public void HPUp()
     {
         movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
-        movement.maxHealth++;
-        movement.currentHealth = movement.maxHealth;
-        movement.playerHealthbar.SetMaxHealth(movement.maxHealth);
+        movement.maxHealth.Value++;
+        movement.currentHealth = movement.maxHealth.Value;
+        movement.playerHealthbar.SetMaxHealth(movement.maxHealth.Value);
     }
 
     private void Update()

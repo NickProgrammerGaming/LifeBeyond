@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
 
                 playerShooting = GameObject.Find("Player").GetComponent<PlayerShooting>();
 
-                int _damage = damage + playerShooting.damageModifiers;
+                int _damage = damage + playerShooting.damageModifiers.Value;
 
                 if (pEnemy != null)
                 {

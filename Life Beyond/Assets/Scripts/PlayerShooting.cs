@@ -14,7 +14,7 @@ public class PlayerShooting : MonoBehaviour
     public Transform gunTransform;
     Vector3 startingGunPos;
     public float returnSpeed;
-    public int damageModifiers = 0;
+    public IntSO damageModifiers;
 
     private void Start()
     {

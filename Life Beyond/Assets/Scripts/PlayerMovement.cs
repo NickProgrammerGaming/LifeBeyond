@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckPos;
     public float groundCheckRadius;
     public LayerMask GroundLayer;
-
-    public int maxHealth;
-    [HideInInspector]public int currentHealth;
+    public IntSO maxHealth;
+    [HideInInspector]
+    public int currentHealth;
     
     private bool isVoid = false;
     public LayerMask Void;
@@ -41,8 +41,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rigbod = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
-        playerHealthbar.SetMaxHealth(maxHealth);
+        currentHealth = maxHealth.Value;
+        playerHealthbar.SetMaxHealth(maxHealth.Value);
     }
     
 

@@ -656,6 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdc72e1a52d3304f8eadb929a52b84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: {fileID: 11400000, guid: 260e6951240a4894a961cb1afbd7af20, type: 2}
+  damageModifiers: {fileID: 11400000, guid: 34f69456034cff5448fab0dd764970c1, type: 2}
 --- !u!1 &1251203683
 GameObject:
   m_ObjectHideFlags: 0
