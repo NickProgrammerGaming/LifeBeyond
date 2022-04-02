@@ -5,17 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject satelliteInfoObject;
-    public PlayerMovement movement;
-    public PlayerShooting shooting;
+    public GameObject satelliteObject;
     public GameObject pauseMenuObject;
     bool pauseMenu = false;
 
-    public void CloseSatelliteInfo()
+    public void CloseSatellite()
     {
-        satelliteInfoObject.SetActive(false);
-        movement.enabled = true;
-        shooting.enabled = true;
+        satelliteObject.SetActive(false);
     }
 
     private void Update()
