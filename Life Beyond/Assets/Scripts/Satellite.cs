@@ -6,7 +6,7 @@ using TMPro;
 
 public class Satellite : MonoBehaviour
 {
-    public GameObject satteliteObject;
+   private GameObject satteliteObject;
 
     private void Start()
     {
@@ -16,5 +16,7 @@ public class Satellite : MonoBehaviour
     public void Interact()
     {
         satteliteObject.SetActive(true);
+        PlayerMovement.canMove = false;
+        PlayerShooting.canShoot = false;
     }
 }

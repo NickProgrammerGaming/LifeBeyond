@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public static bool canShoot = true;
     public float fireRate;
     float nextTimeToShoot;
     public float projectileSpeed;
@@ -13,6 +14,7 @@ public class PlayerShooting : MonoBehaviour
     public Transform gunTransform;
     Vector3 startingGunPos;
     public float returnSpeed;
+    public int damageModifiers = 0;
 
     private void Start()
     {
@@ -21,14 +23,17 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        gunTransform.localPosition = Vector3.Lerp(gunTransform.localPosition, startingGunPos, returnSpeed * Time.deltaTime);
-        gunTransform.localRotation = Quaternion.Lerp(gunTransform.localRotation, Quaternion.identity, returnSpeed * Time.deltaTime);
-
-        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextTimeToShoot)
+        if(canShoot)
         {
-            Shoot();
+            gunTransform.localPosition = Vector3.Lerp(gunTransform.localPosition, startingGunPos, returnSpeed * Time.deltaTime);
+            gunTransform.localRotation = Quaternion.Lerp(gunTransform.localRotation, Quaternion.identity, returnSpeed * Time.deltaTime);
 
-            nextTimeToShoot = Time.time + 1f / fireRate;
+            if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextTimeToShoot)
+            {
+                Shoot();
+
+                nextTimeToShoot = Time.time + 1f / fireRate;
+            }
         }
     }
 

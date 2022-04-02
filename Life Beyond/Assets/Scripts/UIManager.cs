@@ -8,10 +8,28 @@ public class UIManager : MonoBehaviour
     public GameObject satelliteObject;
     public GameObject pauseMenuObject;
     bool pauseMenu = false;
+    private PlayerShooting shooting;
+    private PlayerMovement movement;
 
     public void CloseSatellite()
     {
         satelliteObject.SetActive(false);
+        PlayerMovement.canMove = true;
+        PlayerShooting.canShoot = true;
+    }
+
+    public void DMGUp()
+    {
+        shooting = GameObject.Find("Player").GetComponent<PlayerShooting>();
+        shooting.damageModifiers++;
+    }
+
+    public void HPUp()
+    {
+        movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        movement.maxHealth++;
+        movement.currentHealth = movement.maxHealth;
+        movement.playerHealthbar.SetMaxHealth(movement.maxHealth);
     }
 
     private void Update()

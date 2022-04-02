@@ -87591,7 +87591,7 @@ PrefabInstance:
     - target: {fileID: 8850292330943051862, guid: f846c469dca3c5c4982d7975c2eb1e2a, type: 3}
       propertyPath: satteliteObject
       value: 
-      objectReference: {fileID: 454514302}
+      objectReference: {fileID: 0}
     - target: {fileID: 8850292330943051867, guid: f846c469dca3c5c4982d7975c2eb1e2a, type: 3}
       propertyPath: m_Name
       value: Satelites

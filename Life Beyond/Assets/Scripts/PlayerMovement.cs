@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static bool canMove = true;
 
     public Animator animator;
     public float MovementSpeed;
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask GroundLayer;
 
     public int maxHealth;
-    int currentHealth;
+    [HideInInspector]public int currentHealth;
     
     private bool isVoid = false;
     public LayerMask Void;
@@ -48,36 +49,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Physics2D.IgnoreLayerCollision(7, 11);
-        move = Input.GetAxis("Horizontal");
-        animator.SetFloat("Running", Mathf.Abs(move));
-        Vector3 chScale = transform.localScale;
-        if (move < 0)
+        if(canMove)
         {
-            
-            chScale.x = -1;
-        }
-        if (move > 0)
-        {
-            
-            chScale.x = 1;
-        }
+            move = Input.GetAxis("Horizontal");
+            animator.SetFloat("Running", Mathf.Abs(move));
+            Vector3 chScale = transform.localScale;
+            if (move < 0)
+            {
+                chScale.x = -1;
+            }
+            if (move > 0)
+            {
 
-        transform.localScale = chScale;
-        rigbod.velocity = new Vector2(move * MovementSpeed, rigbod.velocity.y);
-        isGrounded = Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRadius, GroundLayer);
-        animator.SetBool("IsGrounded", isGrounded);
-        if (Input.GetButtonDown("Jump") && isGrounded == true)
-        {
-            CreateDust();
-            rigbod.velocity = new Vector2(rigbod.velocity.x, JumpForce);
+                chScale.x = 1;
+            }
 
+            transform.localScale = chScale;
+            rigbod.velocity = new Vector2(move * MovementSpeed, rigbod.velocity.y);
+            isGrounded = Physics2D.OverlapCircle(groundCheckPos.position, groundCheckRadius, GroundLayer);
+            animator.SetBool("IsGrounded", isGrounded);
+            if (Input.GetButtonDown("Jump") && isGrounded == true)
+            {
+                CreateDust();
+                rigbod.velocity = new Vector2(rigbod.velocity.x, JumpForce);
+
+            }
+            if (Input.GetButtonUp("Jump") && rigbod.velocity.y > 0)
+            {
+                rigbod.velocity = new Vector2(rigbod.velocity.x, rigbod.velocity.y * .5f);
+            }
         }
-        if (Input.GetButtonUp("Jump") && rigbod.velocity.y > 0)
-        {
-            rigbod.velocity = new Vector2(rigbod.velocity.x, rigbod.velocity.y * .5f);  
-        }
-        
 
         if (rigbod.velocity.y < -0.01f)
         {
