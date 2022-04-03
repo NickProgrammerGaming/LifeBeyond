@@ -190,6 +190,7 @@ MonoBehaviour:
   boss: 0
   bossHealthbar: {fileID: 0}
   bossName: {fileID: 0}
+  heartObject: {fileID: 8576762670849199813, guid: 352aa471bfaf994458b174de8a8b594f, type: 3}
 --- !u!50 &1765715643851408463
 Rigidbody2D:
   serializedVersion: 4

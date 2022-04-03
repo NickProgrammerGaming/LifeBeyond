@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Huge Spike Roach
   damage: 1
-  maxHealth: 30
+  maxHealth: 50
   speed: 300
   groundDetect: {fileID: 115639290150819809}
   ground:
@@ -160,8 +160,7 @@ MonoBehaviour:
   boss: 1
   bossHealthbar: {fileID: 0}
   bossName: {fileID: 0}
-  jumpForce: 2
-  jump: 0
+  heartObject: {fileID: 8576762670849199813, guid: 352aa471bfaf994458b174de8a8b594f, type: 3}
 --- !u!50 &115639289016518619
 Rigidbody2D:
   serializedVersion: 4
@@ -224,7 +223,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

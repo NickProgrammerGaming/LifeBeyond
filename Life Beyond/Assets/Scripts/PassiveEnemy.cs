@@ -24,7 +24,8 @@ public class PassiveEnemy : MonoBehaviour
     public Healthbar bossHealthbar;
     public TMP_Text bossName;
     float nextTimeToSpeed;
-    float nextTimeToDecideJump;
+    public GameObject heartObject;
+    int drop;
 
     void Start()
     {
@@ -88,6 +89,13 @@ public class PassiveEnemy : MonoBehaviour
 
     public void Die()
     {
+        drop = Random.Range(0, 100);
+
+        if(drop <= 20)
+        {
+            Instantiate(heartObject, transform.position, Quaternion.identity);
+        }
+
         Destroy(gameObject);
         if (boss)
         {

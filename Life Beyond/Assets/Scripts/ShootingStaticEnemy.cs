@@ -19,6 +19,8 @@ public class ShootingStaticEnemy : MonoBehaviour
     public bool boss;
     public Healthbar bossHealthbar;
     public TMP_Text bossName;
+    public GameObject heartObject;
+    int drop;
 
     private void Start()
     {
@@ -84,6 +86,13 @@ public class ShootingStaticEnemy : MonoBehaviour
 
     public void Die()
     {
+
+
+        if (drop <= 20)
+        {
+            Instantiate(heartObject, transform.position, Quaternion.identity);
+        }
+
         Destroy(gameObject);
         if(boss)
         {
