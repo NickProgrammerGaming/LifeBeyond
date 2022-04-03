@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask GroundLayer;
     public IntSO maxHealth;
+    public IntSO damageMod;
     [HideInInspector]
     public int currentHealth;
     
@@ -104,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Restart()
     {
+        damageMod.Value = 0;
+        maxHealth.Value = 5;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

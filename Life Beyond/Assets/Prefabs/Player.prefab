@@ -9789,6 +9789,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   maxHealth: {fileID: 11400000, guid: 260e6951240a4894a961cb1afbd7af20, type: 2}
+  damageMod: {fileID: 11400000, guid: 34f69456034cff5448fab0dd764970c1, type: 2}
   currentHealth: 0
   Void:
     serializedVersion: 2
