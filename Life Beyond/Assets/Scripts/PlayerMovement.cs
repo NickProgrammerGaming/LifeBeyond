@@ -37,12 +37,11 @@ public class PlayerMovement : MonoBehaviour
 
     AudioManager audioManager;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
+        
 
         switch(SceneManager.GetActiveScene().buildIndex)
         {
@@ -72,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         rigbod = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth.Value;
         playerHealthbar.SetMaxHealth(maxHealth.Value);
+
     }
     
 

@@ -17,17 +17,29 @@ public class Boss : MonoBehaviour
 	public float burstFireRate;
 	float nextTimeToShoot;
 	public TMP_Text bossName;
+	AudioManager audioManager;
 
 
 
 	void Start()
     {
+		foreach(Sound s in audioManager.sounds)
+        {
+			s.source.Stop();
+        }
+		/*
+		Za po kusno kato ima boss theme
+		audioManager.Play("BossTheme");
+		*/
+
 		currentHealth = maxHealth;
 		
 		bossHealthbar.SetMaxHealth(maxHealth);
 		bossName.text = name;
 		bossHealthbar.gameObject.SetActive(true);
 		bossName.gameObject.SetActive(true);
+
+		audioManager = FindObjectOfType<AudioManager>();
 
 	}
 
@@ -85,10 +97,14 @@ public class Boss : MonoBehaviour
 		{
 			bulletRb.AddForce(shootDirection * projectileSpeed);
 		}
+
+		audioManager.Play("Shoot");
+		
 	}
 
 	public void TakeDamage(int damage)
 	{
+		audioManager.Play("Hurt");
 		currentHealth -= damage;
 		bossHealthbar.SetHealth(currentHealth);
 
@@ -96,6 +112,7 @@ public class Boss : MonoBehaviour
 
 	public void Die()
     {
+		audioManager.Play("EnemyDeath");
 		Destroy(gameObject);
 		bossHealthbar.gameObject.SetActive(false);
 		bossName.gameObject.SetActive(false);
