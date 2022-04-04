@@ -25,6 +25,8 @@ public class Heart : MonoBehaviour
 
             player.playerHealthbar.SetHealth(player.currentHealth);
 
+            FindObjectOfType<AudioManager>().Play("Pickup");
+
             Destroy(gameObject);
         }
     }

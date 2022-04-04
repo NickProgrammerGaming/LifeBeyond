@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
         satelliteObject.SetActive(false);
         movement.enabled = true;
         PlayerShooting.canShoot = true;
+        FindObjectOfType<AudioManager>().Play("PowerUp");
     }
 
     public void DMGUp()

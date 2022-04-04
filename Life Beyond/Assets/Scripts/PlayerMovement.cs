@@ -35,11 +35,40 @@ public class PlayerMovement : MonoBehaviour
 
     public ParticleSystem Dust;
 
+    AudioManager audioManager;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
+        switch(SceneManager.GetActiveScene().buildIndex)
+        {
+            case 1:
+                foreach(Sound s in audioManager.sounds)
+                {
+                    s.source.Stop();
+                }
+                audioManager.Play("Level1");
+                break;
+            case 2:
+                foreach (Sound s in audioManager.sounds)
+                {
+                    s.source.Stop();
+                }
+                audioManager.Play("Level2");
+                break;
+            case 3:
+                foreach (Sound s in audioManager.sounds)
+                {
+                    s.source.Stop();
+                }
+                audioManager.Play("Level3");
+                break;
+        }
+
         rigbod = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth.Value;
         playerHealthbar.SetMaxHealth(maxHealth.Value);
@@ -97,7 +126,9 @@ public class PlayerMovement : MonoBehaviour
 
         if(currentHealth <= 0)
         {
+            audioManager.Play("PlayerDeath");
             gameOverScreen.SetActive(true);
+            gameObject.SetActive(false);
         }
             
 
@@ -124,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        audioManager.Play("Hurt");
         currentHealth -= damage;
         playerHealthbar.SetHealth(currentHealth);
 

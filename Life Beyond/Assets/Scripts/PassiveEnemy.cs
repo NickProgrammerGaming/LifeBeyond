@@ -68,7 +68,7 @@ public class PassiveEnemy : MonoBehaviour
         if(boss)
         {
 
-            speed = Mathf.Clamp(speed, -1100f, 1100f);
+            speed = Mathf.Clamp(speed, -2100f, 2100f);
 
             if(Time.time > nextTimeToSpeed)
             {
@@ -80,6 +80,8 @@ public class PassiveEnemy : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("Hurt");
+
         currentHealth -= damage;
         if (boss)
         {
@@ -89,6 +91,8 @@ public class PassiveEnemy : MonoBehaviour
 
     public void Die()
     {
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+
         drop = Random.Range(0, 100);
 
         if(drop <= 20)

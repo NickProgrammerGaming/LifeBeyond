@@ -61,7 +61,7 @@ public class PlayerShooting : MonoBehaviour
             laserRb.AddForce(shootDirection * projectileSpeed);
         }
 
-
+        FindObjectOfType<AudioManager>().Play("Shoot");
     }
 
 }

@@ -103,8 +103,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   projectileSpeed: 500
   seeDistance: 4.18
-  damage: 1
-  maxHealth: 3
+  maxHealth: 6
   boss: 0
   bossHealthbar: {fileID: 0}
   bossName: {fileID: 0}

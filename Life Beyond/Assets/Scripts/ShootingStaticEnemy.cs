@@ -13,7 +13,6 @@ public class ShootingStaticEnemy : MonoBehaviour
     public float projectileSpeed;
     bool hasSeenPlayer;
     public float seeDistance;
-    public int damage;
     public int maxHealth;
     int currentHealth;
     public bool boss;
@@ -37,7 +36,7 @@ public class ShootingStaticEnemy : MonoBehaviour
     void Update()
     {
         hasSeenPlayer = Vector2.Distance(playerTransform.position, transform.position) <= seeDistance;
-        if(hasSeenPlayer == true && Time.time > nextTimeToShoot)
+        if(hasSeenPlayer == true && Time.time > nextTimeToShoot && playerTransform.GetComponent<PlayerMovement>().currentHealth > 0)
         {
             Shoot();
 
@@ -64,6 +63,9 @@ public class ShootingStaticEnemy : MonoBehaviour
         {
             bulletRb.AddForce(shootDirection * projectileSpeed);
         }
+
+        FindObjectOfType<AudioManager>().Play("Shoot");
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -77,6 +79,7 @@ public class ShootingStaticEnemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("Hurt");
         currentHealth -= damage;
         if(boss)
         {
@@ -86,7 +89,7 @@ public class ShootingStaticEnemy : MonoBehaviour
 
     public void Die()
     {
-
+        FindObjectOfType<AudioManager>().Play("EnemyDeath");
 
         if (drop <= 20)
         {

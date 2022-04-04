@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6483099278809479763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6483099278809479762}
+  - component: {fileID: 6483099278809479757}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6483099278809479762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6483099278809479763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6483099278809479757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6483099278809479763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8709772d480adb4394343a658f92eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 00f6c7e9d7dd85b4ba810f5ead3ebe21, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: d55a57713dbc30540842dc83465f9eea, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hurt
+    clip: {fileID: 8300000, guid: 3076e64eaf809bf4fb5eeafbac2725ef, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 891bd567ca0819548af7c048e8a65700, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: fff8a2c1d12e588498b38cd75c2fb3a4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MainMenu
+    clip: {fileID: 8300000, guid: 7a95a2918b0dcf5469e29f83c73e2a20, type: 3}
+    volume: 0.27
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Level1
+    clip: {fileID: 8300000, guid: 35ca2e731fde25e43bb68752832510dd, type: 3}
+    volume: 0.418
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Level2
+    clip: {fileID: 8300000, guid: 4c9592e44fca12f45a52be05bdee5503, type: 3}
+    volume: 0.27
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Level3
+    clip: {fileID: 8300000, guid: 55ceed6b3924d3e4886741d63ffd9f00, type: 3}
+    volume: 0.27
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Pickup
+    clip: {fileID: 8300000, guid: 769d7ff7f8184bb48abb51b68d50d531, type: 3}
+    volume: 0.27
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
