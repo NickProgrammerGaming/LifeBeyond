@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     bool pauseMenu = false;
     private PlayerShooting shooting;
     private PlayerMovement movement;
+    public ParticleSystem Heal;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class UIManager : MonoBehaviour
         movement.maxHealth.Value++;
         movement.currentHealth = movement.maxHealth.Value;
         movement.playerHealthbar.SetMaxHealth(movement.maxHealth.Value);
+        HealthUp();
     }
 
     private void Update()
@@ -70,5 +72,10 @@ public class UIManager : MonoBehaviour
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    void HealthUp(){
+        Heal = GameObject.Find("Player").transform.Find("HealthUp").GetComponent<ParticleSystem>();
+        Heal.Play();
     }
 }

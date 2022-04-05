@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
+    public ParticleSystem Heal;
     public int healAmount;
     PlayerMovement player;
 
@@ -16,11 +17,13 @@ public class Heart : MonoBehaviour
             if (player != null)
             {
                 player.currentHealth += healAmount;
+                HealthUp();
             }
 
             if (player.currentHealth > player.maxHealth.Value)
             {
                 player.currentHealth -= (player.currentHealth - player.maxHealth.Value);
+                HealthUp();
             }
 
             player.playerHealthbar.SetHealth(player.currentHealth);
@@ -29,5 +32,9 @@ public class Heart : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+    void HealthUp(){
+        Heal = GameObject.Find("Player").transform.Find("HealthUp").GetComponent<ParticleSystem>();
+        Heal.Play();
     }
 }
