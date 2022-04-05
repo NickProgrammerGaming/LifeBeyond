@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b859c7935e62d9c4a9b9f8b3c8e09c53, type: 3}
   m_Name: DamageMod
   m_EditorClassIdentifier: 
-  _value: 100000
+  _value: 0

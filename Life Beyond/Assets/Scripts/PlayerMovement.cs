@@ -35,43 +35,12 @@ public class PlayerMovement : MonoBehaviour
 
     public ParticleSystem Dust;
 
-    AudioManager audioManager;
-
     // Start is called before the first frame update
     void Start()
     {
-        audioManager = FindObjectOfType<AudioManager>();
-        
-
-        switch(SceneManager.GetActiveScene().buildIndex)
-        {
-            case 1:
-                foreach(Sound s in audioManager.sounds)
-                {
-                    s.source.Stop();
-                }
-                audioManager.Play("Level1");
-                break;
-            case 2:
-                foreach (Sound s in audioManager.sounds)
-                {
-                    s.source.Stop();
-                }
-                audioManager.Play("Level2");
-                break;
-            case 3:
-                foreach (Sound s in audioManager.sounds)
-                {
-                    s.source.Stop();
-                }
-                audioManager.Play("Level3");
-                break;
-        }
-
         rigbod = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth.Value;
         playerHealthbar.SetMaxHealth(maxHealth.Value);
-
     }
     
 
@@ -126,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            audioManager.Play("PlayerDeath");
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             gameOverScreen.SetActive(true);
             gameObject.SetActive(false);
         }
@@ -155,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        audioManager.Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("Hurt");
         currentHealth -= damage;
         playerHealthbar.SetHealth(currentHealth);
 
@@ -163,6 +132,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChangeScene(int sceneNumber)
     {
+        switch(sceneNumber)
+        {
+            case 2:
+                FindObjectOfType<AudioManager>().Stop("Level1");
+                FindObjectOfType<AudioManager>().Play("Level2");
+                break;
+            case 3:
+                FindObjectOfType<AudioManager>().Stop("Level2");
+                FindObjectOfType<AudioManager>().Play("Level3");
+                break;
+        }
+
         SceneManager.LoadScene(sceneNumber);
     }
 

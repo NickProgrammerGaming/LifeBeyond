@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        FindObjectOfType<AudioManager>().Stop("MainMenu");
+        FindObjectOfType<AudioManager>().Play("Level1");
         SceneManager.LoadScene(1);
     }
 
