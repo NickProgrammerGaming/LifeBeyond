@@ -191,6 +191,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 768670913}
@@ -3178,6 +3182,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 768670913}
@@ -3254,6 +3262,10 @@ PrefabInstance:
       propertyPath: seeDistance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
@@ -3567,6 +3579,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 768670913}
@@ -3648,6 +3664,10 @@ PrefabInstance:
       propertyPath: seeDistance
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
@@ -4047,6 +4067,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 768670913}
@@ -4188,6 +4212,10 @@ PrefabInstance:
       propertyPath: seeDistance
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 3945089765647780049, guid: d97c362138c82ba4f9ee55d8f7f3fcd2, type: 3}
     - target: {fileID: 7845270438815305347, guid: fb35dd57a2c1783468f2fa6694a0d87c, type: 3}
       propertyPath: playerTransform
       value: 
