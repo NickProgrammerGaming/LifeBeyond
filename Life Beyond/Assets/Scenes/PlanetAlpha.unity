@@ -99801,7 +99801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Huge Spike Roach
-  damage: 3
+  damage: 2
   maxHealth: 100
   speed: 300
   groundDetect: {fileID: 1765715643689037645}
