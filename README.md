@@ -1,6 +1,6 @@
 # Life Beyond
 
-!Лого
+!Лого(https://github.com/NickProgrammerGaming/LifeBeyond/blob/main/Cover.PNG)
 
 *2D platformer игра напрвена на Unity*
 
