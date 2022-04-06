@@ -19,4 +19,5 @@
 
 * **Никола Кръстанов** - *програмист* - NickProgrammerGaming(https://github.com/NickProgrammerGaming)
 * **Александър Мечкаров** - *дизайнер* - Mechkarov-intel(https://github.com/Mechkarov-intel)
-
+* **Злати Златев** - *мап дизайн* - Mechkarov-intel(https://github.com/Mechkarov-intel)
+* **Александър Мечкаров** - *мап дизайн* - Mechkarov-intel(https://github.com/Mechkarov-intel)
