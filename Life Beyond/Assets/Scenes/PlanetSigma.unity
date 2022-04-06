@@ -18908,6 +18908,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
     - target: {fileID: 3388124890462425538, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -19157,9 +19181,10 @@ MonoBehaviour:
   isFlipped: 0
   projectileSpeed: 500
   bulletPrefab: {fileID: 8628779925098086113, guid: da7e7c4844b0fff4e95c393f9176cc3c, type: 3}
-  groundSlamBullets: 10
+  groundSlamBullets: 5
   burstFireRate: 10
   bossName: {fileID: 2120777582}
+  DeadPart: {fileID: 5712041514776857023, guid: 56e92d33bb10b714fb39cff74a474b1b, type: 3}
 --- !u!50 &1849792061
 Rigidbody2D:
   serializedVersion: 4
@@ -19483,14 +19508,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7369626045795071115, guid: 85877433ac7aacc47b3b5bfd1bd2eb04, type: 3}
-      propertyPath: movement
-      value: 
-      objectReference: {fileID: 340984637}
-    - target: {fileID: 7369626045795071115, guid: 85877433ac7aacc47b3b5bfd1bd2eb04, type: 3}
-      propertyPath: shooting
-      value: 
-      objectReference: {fileID: 340984638}
     - target: {fileID: 7369626045795071116, guid: 85877433ac7aacc47b3b5bfd1bd2eb04, type: 3}
       propertyPath: m_Pivot.x
       value: 0

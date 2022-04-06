@@ -99840,7 +99840,7 @@ MonoBehaviour:
   bossHealthbar: {fileID: 1761895921}
   bossName: {fileID: 1721373436}
   heartObject: {fileID: 8576762670849199813, guid: 352aa471bfaf994458b174de8a8b594f, type: 3}
-  DeadPart: {fileID: 0}
+  DeadPart: {fileID: 5712041514776857023, guid: 56e92d33bb10b714fb39cff74a474b1b, type: 3}
 --- !u!50 &1765715642675330935
 Rigidbody2D:
   serializedVersion: 4

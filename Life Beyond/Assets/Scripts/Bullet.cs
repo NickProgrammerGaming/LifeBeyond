@@ -10,7 +10,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(bulletMode == BulletMode.Player)
+        PlayerMovement player = collision.transform.GetComponent<PlayerMovement>();
+
+        if (bulletMode == BulletMode.Player)
         {
             if (collision.transform.tag == "Enemy")
             {
@@ -37,11 +39,11 @@ public class Bullet : MonoBehaviour
 
             }
         }
-        else
+        else 
         {
             if (collision.transform.tag == "Player")
             {
-                PlayerMovement player = collision.transform.GetComponent<PlayerMovement>();
+                
                 player.TakeDamage(damage);
 
             }

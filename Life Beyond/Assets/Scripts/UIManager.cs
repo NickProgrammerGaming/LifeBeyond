@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class UIManager : MonoBehaviour
     private PlayerShooting shooting;
     private PlayerMovement movement;
     public ParticleSystem Heal;
+    public TMP_Text dmgText;
 
     private void Start()
     {
         movement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         shooting = GameObject.Find("Player").GetComponent<PlayerShooting>();
+        dmgText.text = "" + (1 + shooting.damageModifiers.Value);
     }
 
     public void CloseSatellite()
@@ -29,6 +32,7 @@ public class UIManager : MonoBehaviour
     public void DMGUp()
     {
         shooting.damageModifiers.Value++;
+        dmgText.text = "" + (1 + shooting.damageModifiers.Value);
     }
 
     public void HPUp()

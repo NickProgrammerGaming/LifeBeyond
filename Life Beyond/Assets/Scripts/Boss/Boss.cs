@@ -18,12 +18,15 @@ public class Boss : MonoBehaviour
 	float nextTimeToShoot;
 	public TMP_Text bossName;
 	AudioManager audioManager;
+	public GameObject DeadPart;
 
 
 
 	void Start()
     {
-		foreach(Sound s in audioManager.sounds)
+		audioManager = FindObjectOfType<AudioManager>();
+
+		foreach (Sound s in audioManager.sounds)
         {
 			s.source.Stop();
         }
@@ -39,7 +42,7 @@ public class Boss : MonoBehaviour
 		bossHealthbar.gameObject.SetActive(true);
 		bossName.gameObject.SetActive(true);
 
-		audioManager = FindObjectOfType<AudioManager>();
+		
 
 	}
 
@@ -86,19 +89,23 @@ public class Boss : MonoBehaviour
 
 	public void Shoot()
 	{
-		Vector2 shootDirection = (player.position - transform.position).normalized;
-		float bulletAngle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+		if(player.GetComponent<PlayerMovement>().currentHealth > 0)
+        {
+			Vector2 shootDirection = (player.position - transform.position).normalized;
+			float bulletAngle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
 
-		GameObject instantiatedBullet = Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(bulletAngle, Vector3.forward));
+			GameObject instantiatedBullet = Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(bulletAngle, Vector3.forward));
 
-		Rigidbody2D bulletRb = instantiatedBullet.GetComponent<Rigidbody2D>();
+			Rigidbody2D bulletRb = instantiatedBullet.GetComponent<Rigidbody2D>();
 
-		if (bulletRb != null)
-		{
-			bulletRb.AddForce(shootDirection * projectileSpeed);
+			if (bulletRb != null)
+			{
+				bulletRb.AddForce(shootDirection * projectileSpeed);
+			}
+
+			audioManager.Play("Shoot");
 		}
-
-		audioManager.Play("Shoot");
+		
 		
 	}
 
@@ -112,6 +119,7 @@ public class Boss : MonoBehaviour
 
 	public void Die()
     {
+		Instantiate(DeadPart, transform.position, Quaternion.identity);
 		audioManager.Play("EnemyDeath");
 		Destroy(gameObject);
 		bossHealthbar.gameObject.SetActive(false);
