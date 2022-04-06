@@ -132,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChangeScene(int sceneNumber)
     {
+
         switch(sceneNumber)
         {
             case 2:
@@ -143,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Level3");
                 break;
         }
+
 
         SceneManager.LoadScene(sceneNumber);
     }

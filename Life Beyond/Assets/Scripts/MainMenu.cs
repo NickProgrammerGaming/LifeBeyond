@@ -10,14 +10,22 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        foreach(Sound s in FindObjectOfType<AudioManager>().sounds)
+        {
+            s.source.Stop();
+        }
+
+        FindObjectOfType<AudioManager>().Play("MainMenu");
         maxHp.Value = 5;
         damageModifiers.Value = 0;
     }
 
     public void Play()
     {
+
         FindObjectOfType<AudioManager>().Stop("MainMenu");
         FindObjectOfType<AudioManager>().Play("Level1");
+
         SceneManager.LoadScene(1);
     }
 
