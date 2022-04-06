@@ -1,6 +1,6 @@
-#Life Beyond
+# Life Beyond
 
-![Лого/Визия на проекта](path_to_logo.png)
+!Лого
 
 *2D platformer игра напрвена на Unity*
 
