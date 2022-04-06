@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 09cee6494b4188448b143bbbb8cd0054, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.69411767, g: 0.22745098, b: 0.8, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -191,6 +191,7 @@ MonoBehaviour:
   bossHealthbar: {fileID: 0}
   bossName: {fileID: 0}
   heartObject: {fileID: 8576762670849199813, guid: 352aa471bfaf994458b174de8a8b594f, type: 3}
+  DeadPart: {fileID: 5712041514776857023, guid: 56e92d33bb10b714fb39cff74a474b1b, type: 3}
 --- !u!50 &1765715643851408463
 Rigidbody2D:
   serializedVersion: 4

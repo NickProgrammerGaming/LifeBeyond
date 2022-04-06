@@ -26,6 +26,7 @@ public class PassiveEnemy : MonoBehaviour
     float nextTimeToSpeed;
     public GameObject heartObject;
     int drop;
+    public GameObject DeadPart;
 
     void Start()
     {
@@ -91,6 +92,7 @@ public class PassiveEnemy : MonoBehaviour
 
     public void Die()
     {
+        Instantiate(DeadPart,transform.position,Quaternion.identity);
         FindObjectOfType<AudioManager>().Play("EnemyDeath");
 
         drop = Random.Range(0, 100);

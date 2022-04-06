@@ -21,6 +21,8 @@ public class ShootingStaticEnemy : MonoBehaviour
     public GameObject heartObject;
     int drop;
 
+    public GameObject DeadPart;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -89,10 +91,13 @@ public class ShootingStaticEnemy : MonoBehaviour
 
     public void Die()
     {
+        Instantiate(DeadPart,transform.position,Quaternion.identity);
         FindObjectOfType<AudioManager>().Play("EnemyDeath");
+        
 
         if (drop <= 20)
         {
+            
             Instantiate(heartObject, transform.position, Quaternion.identity);
         }
 

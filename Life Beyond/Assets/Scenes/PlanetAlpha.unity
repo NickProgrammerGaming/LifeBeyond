@@ -87912,6 +87912,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.054901965
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.7568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.23529413
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.44705886
+      objectReference: {fileID: 0}
+    - target: {fileID: 749209454, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.94117653
+      objectReference: {fileID: 0}
     - target: {fileID: 3388124890462425538, guid: cf33f28f02312f245b2290a9f7e8b6d9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -99816,6 +99840,7 @@ MonoBehaviour:
   bossHealthbar: {fileID: 1761895921}
   bossName: {fileID: 1721373436}
   heartObject: {fileID: 8576762670849199813, guid: 352aa471bfaf994458b174de8a8b594f, type: 3}
+  DeadPart: {fileID: 0}
 --- !u!50 &1765715642675330935
 Rigidbody2D:
   serializedVersion: 4

@@ -99,15 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   fireRate: 1
-  bulletPrefab: {fileID: 8628779925098086113, guid: 3f18646779f5b6b40b988493b82e7ac6, type: 3}
+  bulletPrefab: {fileID: 5462369119150620370, guid: ab712f72994c9c343944ea9964a15d6c, type: 3}
   playerTransform: {fileID: 0}
   projectileSpeed: 500
-  seeDistance: 4.18
-  maxHealth: 6
+  seeDistance: 6
+  maxHealth: 4
   boss: 0
   bossHealthbar: {fileID: 0}
   bossName: {fileID: 0}
   heartObject: {fileID: 8576762670849199813, guid: 352aa471bfaf994458b174de8a8b594f, type: 3}
+  DeadPart: {fileID: 5712041514776857023, guid: 56e92d33bb10b714fb39cff74a474b1b, type: 3}
 --- !u!61 &7845270438815305346
 BoxCollider2D:
   m_ObjectHideFlags: 0
