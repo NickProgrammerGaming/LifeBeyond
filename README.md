@@ -1,6 +1,6 @@
 # Life Beyond
 
-!Лого(https://github.com/NickProgrammerGaming/LifeBeyond/blob/main/Cover.PNG)
+!https://github.com/NickProgrammerGaming/LifeBeyond/blob/main/Cover.PNG
 
 *2D platformer игра напрвена на Unity*
 
@@ -12,7 +12,7 @@
 1) Отидете на https://nickgamingbruh.itch.io/life-beyond
 2) Следвайте инструкциите, написани там
 
-## Използвани технологии (задължително)
+## Използвани технологии
 
 * Unity 2D(https://unity.com) - *Unity е game engine поддържащ 2D и 3D графика. Езикът, който този engine използва е C#.*
 
